@@ -1,0 +1,14 @@
+.not-found-card {
+  width: 20rem;
+  padding: 5rem 2rem;
+  text-align: center;
+  background-color: #a7beff;
+  margin: 10rem auto 0;
+
+  mat-card-content {
+    color: #3b41c6;
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+}
+

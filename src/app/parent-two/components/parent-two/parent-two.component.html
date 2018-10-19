@@ -1,0 +1,9 @@
+<ul>
+  <li *ngFor="let user of users; trackBy: trackByFn">
+    <div>{{user.name}}</div>
+    <div>{{user.city}}</div>
+    <button mat-flat-button type="button" color="primary">
+      <a [routerLink]="['/parent-one']" (click)="sendNewUser(user)">Choose as new user</a>
+    </button>
+  </li>
+</ul>

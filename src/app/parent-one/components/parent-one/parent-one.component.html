@@ -1,0 +1,12 @@
+<app-child-one
+  [name]="($user | async)?.name"
+  [city]="($user | async)?.city"
+  [id]="($user | async)?.id"
+  [form]="form"
+  [cities]="cities"
+  (confirm)="onConfirmMoving($event)"
+></app-child-one>
+
+<button mat-stroked-button type="button" color="primary">
+  <a [routerLink]="['/parent-two']" >Change user</a>
+</button>

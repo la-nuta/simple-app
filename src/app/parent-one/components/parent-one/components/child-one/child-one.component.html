@@ -1,0 +1,23 @@
+<mat-card class="not-found-card">
+  <mat-card-content>
+    <p>
+      User: {{name}} is glad to see you!
+    </p>
+
+    <p>
+      City: {{name}}'s city is {{city}}
+    </p>
+
+    <form [formGroup]="form" >
+      <mat-form-field>
+        <mat-select placeholder="Move to" class="form-control" formControlName="city">
+          <mat-option *ngFor="let city of cities" [value]="city">{{city}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <button mat-stroked-button type="button" (click)="confirmMoving($user?.name)" color="primary">
+        Confirm
+      </button>
+    </form>
+  </mat-card-content>
+
+</mat-card>
